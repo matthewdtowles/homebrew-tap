@@ -5,21 +5,21 @@
 class Noenvy < Formula
   desc "Encrypt .env files with your OS keyring and inject secrets into any command."
   homepage "https://github.com/matthewdtowles/noenvy"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.2/noenvy_0.0.2_darwin_x86_64.tar.gz"
-      sha256 "b8399c82354afbb42b06341e587d73f14402403d1f8b48037dc90d11812de5f3"
+      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.3/noenvy_0.0.3_darwin_x86_64.tar.gz"
+      sha256 "4a0895f72b59a290419ef7b692c42a12c0e6ee96672a5f13b9348adcc828f538"
 
       define_method(:install) do
         bin.install "noenvy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.2/noenvy_0.0.2_darwin_arm64.tar.gz"
-      sha256 "e4a64feb523f54884531b06d657f9645c3b063ccccd3ece38566c09fca3eec0d"
+      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.3/noenvy_0.0.3_darwin_arm64.tar.gz"
+      sha256 "d05fad526a118d45be866beb331fec2f3e671e17f1cdca39ebb8872f8ce156c5"
 
       define_method(:install) do
         bin.install "noenvy"
@@ -29,15 +29,15 @@ class Noenvy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.2/noenvy_0.0.2_linux_x86_64.tar.gz"
-      sha256 "b7963d6648cd45db2ca4c6b6f6a2764884df3f49adaf3ccaaa34b82920428f67"
+      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.3/noenvy_0.0.3_linux_x86_64.tar.gz"
+      sha256 "f79df5f41d7394d9a546b779230066bc5c55c65db2b6dc351e651dcf1a80aa17"
       define_method(:install) do
         bin.install "noenvy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.2/noenvy_0.0.2_linux_arm64.tar.gz"
-      sha256 "6a80bfa3ad1e3dfb3f92348ad91eff7d76bda22ec7cf0f1d68ce981e420134a3"
+      url "https://github.com/matthewdtowles/noenvy/releases/download/v0.0.3/noenvy_0.0.3_linux_arm64.tar.gz"
+      sha256 "f546f9db63016714fce62c1e7b0cf2aab91dc420a33772f4d11f21f78d428723"
       define_method(:install) do
         bin.install "noenvy"
       end
